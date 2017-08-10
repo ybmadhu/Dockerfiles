@@ -1,0 +1,58 @@
+ngx_addon_name=ngx_http_clojure_module
+HTTP_AUX_FILTER_MODULES="$HTTP_AUX_FILTER_MODULES ngx_http_clojure_module"
+#HTTP_MODULES="$HTTP_MODULES ngx_http_clojure_module"
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS \
+		$ngx_addon_dir/ngx_http_clojure_mem.c \
+    $ngx_addon_dir/ngx_http_clojure_jvm.c \
+    $ngx_addon_dir/ngx_http_clojure_module.c \
+    $ngx_addon_dir/ngx_http_clojure_socket.c \
+    $ngx_addon_dir/ngx_http_clojure_shared_map.c \
+    $ngx_addon_dir/ngx_http_clojure_shared_map_hashmap.c \
+    $ngx_addon_dir/ngx_http_clojure_shared_map_tinymap.c \
+"
+NGX_ADDON_DEPS="$NGX_ADDON_DEPS \
+    $ngx_addon_dir/ngx_http_clojure_jvm.h \
+    $ngx_addon_dir/ngx_http_clojure_mem.h \
+    $ngx_addon_dir/ngx_http_clojure_socket.h \
+    $ngx_addon_dir/ngx_http_clojure_shared_map.h \
+    $ngx_addon_dir/ngx_http_clojure_shared_map_hashmap.h \
+    $ngx_addon_dir/ngx_http_clojure_shared_map_tinymap.h \
+"
+HTTP_INCS="$HTTP_INCS $ngx_addon_dir"
+
+USE_SHA1=YES
+
+if [ "$JNI_INCS_INCLUDED" != "YES" ]; then
+	if [ -z "$JNI_INCS" ]; then
+		##check jdk
+		if ! type javac; then
+			echo "javac not found, please put it in your PATH"
+			exit 1
+		fi
+		
+		if ! type java; then
+			echo "java not found, please put it in your PATH"
+			exit 1
+		fi
+		
+		mkdir /tmp/nc-DiscoverJvm
+		javac $ngx_addon_dir/../java/nginx/clojure/DiscoverJvm.java -d /tmp/nc-DiscoverJvm
+		
+		if [ -z $JNI_INCS ]; then
+		  JNI_INCS=`java -classpath /tmp/nc-DiscoverJvm nginx.clojure.DiscoverJvm getJniIncludes`;
+		fi
+		
+		rm -rf /tmp/nc-DiscoverJvm
+	fi
+	CFLAGS="$JNI_INCS $CFLAGS"
+fi
+
+CFLAGS="-DNGX_CLOJURE_BE_SILENT_WITHOUT_JVM $CFLAGS"
+
+#for easy debug on linux or macosx  
+#CFLAGS="$CFLAGS -g -O0 "
+
+if [ "$NGX_PLATFORM" != win32 -a "$NGX_SYSTEM" != FreeBSD ]; then
+echo "append -ldl for $NGX_PLATFORM"
+CORE_LIBS="$CORE_LIBS -ldl";
+fi

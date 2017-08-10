@@ -1,0 +1,36 @@
+FROM nimmis/alpine-java:openjdk-8-jre
+
+WORKDIR /src
+
+COPY serviceURL-1.0.jar  /src/
+
+COPY run.sh /src/
+
+COPY development.jks /src/
+COPY symphoni.jks /src/
+
+COPY bosuiteCA.cer /src/
+
+COPY syncomsintermediateca.cer /src/
+
+COPY bosuiteCA.pem /usr/local/share/ca-certificates
+
+COPY syncomsintermediateca.cer /usr/local/share/ca-certificates
+
+RUN update-ca-certificates
+
+RUN keytool -importcert -file /src/syncomsintermediateca.cer -alias syncomsinterca -keystore /usr/lib/jvm/default-jvm/jre/lib/security/cacerts -keypass changeit -noprompt -storepass changeit -trustcacerts
+RUN keytool -importcert -file /src/bosuiteCA.cer -alias bosuite -keystore /usr/lib/jvm/default-jvm/jre/lib/security/cacerts -keypass changeit -noprompt -storepass changeit
+EXPOSE 2008
+
+RUN apk add openssl --force
+
+RUN apk add --update bash
+
+RUN apk add  jq
+
+RUN chmod +x /src/run.sh
+
+ENTRYPOINT /src/run.sh
+
+

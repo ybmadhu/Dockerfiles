@@ -1,0 +1,29 @@
+# Object files
+*.o
+*.ko
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+/bin
+/target
+/.README.md.html
+/.HISTORY.md.html
+/nginx.clojure.wave.cfgtooloutfile
+/dist
+/pom.xml
+/pom.xml.asc
+/.lein-failures
+/.lein-repl-history
+/nginx-tomcat7

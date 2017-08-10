@@ -1,0 +1,16 @@
+#!/bin/bash +e
+
+env_mode='';
+env_mode=`printenv bo.custom.environment`
+echo $env_mode;
+if [ "$env_mode" == "STAGING" ]; then
+echo  Staging mode or development mode;
+java -jar -Dspring.datasource.driver-class-name="com.nuodb.jdbc.Driver" -Dspring.datasource.url="jdbc:com.nuodb://192.168.6.68:48004/BOSecurity_V3?schema=SECURITY"  -Dspring.datasource.data-username="dba"  -Dspring.datasource.data-password="dba" -Dsecurity.oauth2.resource.user-info-uri="https://identityserver.development.symphoni.io/" -Dserver.port=80  /src/EntityDefinition-1.0.jar
+elif [ "$env_mode" == "PRODUCTION" ]; then
+echo Production mode;
+#java -jar   -Dserver.port=443 -Dserver.ssl.key-store="/src/symphoni.jks" -Dserver.ssl.key-store-password="syncoms" -Dserver.ssl.key-alias="symphoni" /src/EntityDefinition-1.0.jar
+java -jar -Dserver.port=80  /src/EntityDefinition-1.0.jar
+else
+echo  "No  environment is set. entering default mode which is production "
+java -jar   -Dserver.port=443 -Dserver.ssl.key-store="/src/symphoni.jks" -Dserver.ssl.key-store-password="syncoms" -Dserver.ssl.key-alias="symphoni" /src/EntityDefinition-1.0.jar
+fi

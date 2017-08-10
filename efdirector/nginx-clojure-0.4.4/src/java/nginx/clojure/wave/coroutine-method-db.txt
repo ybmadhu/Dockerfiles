@@ -1,0 +1,235 @@
+lazyclass:clojure/lang/IFn
+	/invoke.*:family
+	/applyToHelper.*|applyTo.*:just_mark
+
+lazyclass:clojure/lang/AFn
+  /applyToHelper.*|applyTo.*:just_mark
+  call()Ljava/lang/Object;:normal	
+
+lazyclass:clojure/lang/RestFn
+  /invoke.*:just_mark
+  /doInvoke.*:just_mark
+
+lazyclass:clojure/core$apply
+  /invoke.*:just_mark
+  
+lazyclass:clojure/core$with_bindings_STAR_
+  doInvoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;:normal
+    
+lazyclass:clojure/lang/RestFn
+#mark from sub nginx/clojure/core$co_pcalls
+  doInvoke(Ljava/lang/Object;)Ljava/lang/Object;:just_mark
+
+fuzzyclass:com/caucho/hessian/io/Hessian(\d+)Input
+    /read.*
+    /parse.*
+    /isEnd.*
+
+lazyclass:com/caucho/hessian/io/AbstractHessianInput
+    /read.*
+    /parse.*
+    /isEnd.*
+
+fuzzyclass:com/sun/proxy/\$Proxy(\d+)
+  run()V:normal
+
+lazyclass:java/io/BufferedInputStream
+   /read.*
+   /write.*
+   /fill.*
+
+lazyclass:java/io/BufferedReader
+  /read.*
+
+
+lazyclass:java/io/InputStreamReader
+  /read.*
+
+lazyclass:java/io/Reader
+  /read.*
+
+
+lazyclass:java/lang/reflect/Method
+  invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;:just_mark
+  
+lazyclass:java/lang/invoke/MethodHandle
+  invoke([Ljava/lang/Object;)Ljava/lang/Object;:just_mark
+
+lazyclass:java/lang/reflect/InvocationHandler
+  invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;:just_mark
+
+lazyclass:java/io/PrintWriter
+  flush()V:skip
+
+lazyclass:java/lang/Thread
+	sleep(J)V:blocking
+	sleep(JI)V:blocking
+	join()V:blocking
+	join(J)V:blocking
+	join(JI)V:blocking
+
+lazyclass:java/lang/Object
+	wait()V:blocking
+	wait(J)V:blocking
+	wait(JI)V:blocking
+	
+lazyclass:java/lang/Runnable
+#mark from sub java/util/concurrent/ThreadPoolExecutor$Worker
+  run()V:just_mark
+
+lazyclass:java/net/Socket
+	<init>(Ljava/lang/String;I)V:normal
+	<init>(Ljava/net/InetAddress;I)V:normal
+	<init>(Ljava/lang/String;ILjava/net/InetAddress;I)V:normal
+	<init>(Ljava/net/InetAddress;ILjava/net/InetAddress;I)V:normal
+	<init>(Ljava/net/SocketAddress;Ljava/net/SocketAddress;Z)V:normal
+	<init>(Ljava/lang/String;IZ)V:normal
+	<init>(Ljava/net/InetAddress;IZ)V:normal
+	connect(Ljava/net/SocketAddress;)V:normal
+	connect(Ljava/net/SocketAddress;I)V:normal
+
+
+lazyclass:java/util/concurrent/Callable
+#mark from sub java/util/concurrent/Executors$RunnableAdapter
+  call()Ljava/lang/Object;:just_mark
+
+lazyclass:java/util/concurrent/locks/Lock
+	lock()V:blocking
+	lockInterruptibly()V:blocking
+
+
+lazyclass:java/util/concurrent/Executors$RunnableAdapter
+  call()Ljava/lang/Object;:normal
+
+lazyclass:java/util/concurrent/FutureTask
+  run()V:normal
+
+lazyclass:java/util/concurrent/ThreadPoolExecutor
+  runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V:normal
+
+lazyclass:java/util/concurrent/ThreadPoolExecutor$Worker
+  run()V:normal	
+
+
+  
+lazyclass:java/net/SocketImpl
+  /connect.*:normal
+	
+lazyclass:java/io/InputStream
+  /read.*:just_mark
+
+lazyclass:java/io/OutputStream
+  /write.*:just_mark
+  
+lazyclass:nginx/clojure/Coroutine
+  resume()V:skip
+  run()V:skip
+  _resumep()V:skip
+
+
+lazyclass:nginx/clojure/clj/NginxClojureHandler
+  process(Lnginx/clojure/NginxRequest;)Lnginx/clojure/NginxResponse;:normal
+  
+lazyclass:nginx/clojure/java/NginxJavaHandler
+  process(Lnginx/clojure/NginxRequest;)Lnginx/clojure/NginxResponse;:normal
+    
+lazyclass:nginx/clojure/java/NginxJavaRingHandler
+  invoke(Ljava/util/Map;)[Ljava/lang/Object;:just_mark
+  
+lazyclass:nginx/clojure/java/NginxJavaHeaderFilter
+  doFilter(ILjava/util/Map;Ljava/util/Map;)[Ljava/lang/Object;:just_mark
+
+lazyclass:nginx/clojure/java/NginxJavaBodyFilter
+  /doFilter.*:just_mark
+    
+lazyclass:nginx/clojure/NginxHandler
+#mark from sub nginx/clojure/NginxSimpleHandler
+  process(Lnginx/clojure/NginxRequest;)Lnginx/clojure/NginxResponse;:just_mark
+
+lazyclass:nginx/clojure/net/NginxClojureSocketImpl
+	/connect.*
+
+lazyclass:nginx/clojure/net/NginxClojureSocketImpl$SocketInputStream
+  /read.*
+
+
+lazyclass:nginx/clojure/net/NginxClojureSocketImpl$SocketOutputStream
+  /write.*
+
+lazyclass:nginx/clojure/NginxSimpleHandler
+  handleRequest(Lnginx/clojure/NginxRequest;)Lnginx/clojure/NginxResponse;:normal
+
+fuzzyclass:nginx/clojure/NginxSimpleHandler\$(\d+)
+  call()Ljava/lang/Object;:normal
+  call()Lnginx/clojure/NginxClojureRT$WorkerResponseContext;:normal
+
+  
+lazyclass:nginx/clojure/NginxClojureRT
+  coBatchCall([Ljava/util/concurrent/Callable;)[Ljava/lang/Object;:normal
+  eval(IJJ)I:normal
+
+lazyclass:nginx/clojure/core$co_pcalls
+  doInvoke(Ljava/lang/Object;)Ljava/lang/Object;:normal
+  
+fuzzyclass:nginx/clojure/core\$co_pcalls\$iter__(\d+)__(\d+)\$fn__(\d+)\$fn__(\d+)
+  invoke()Ljava/lang/Object;:normal
+  
+
+lazyclass:org/apache/solr/common/util/JavaBinCodec
+  /read.*
+  unmarshal(Ljava/io/InputStream;)Ljava/lang/Object;:normal
+
+lazyclass:sun/nio/cs/StreamDecoder
+  /readBytes.*
+	/implRead.*
+	/read.*
+
+lazyclass:sun/net/www/http/ChunkedInputStream
+  /fastRead.*
+  /read.*
+
+lazyclass:sun/net/www/MeteredStream
+  /read.*
+
+fuzzyclass:sun/reflect/GeneratedMethodAccessor(\d+)
+  /invoke.*:skip
+
+lazyclass:nginx/clojure/NginxHttpServerChannel
+  send(Ljava/lang/String;ZZ)V:normal
+  send([BJII)I:normal
+  sendHeader(I)V:normal
+  sendHeader(JLjava/util/Collection;ZZ)V:normal
+
+lazyclass:nginx/clojure/NginxSimpleHandler
+  execute(JJ)I:normal
+
+fuzzyclass:nginx/clojure/java/GeneralSet(\d+)TestNginxJavaRingHandler\$MultipleChainHandler
+  invoke(Ljava/util/Map;)[Ljava/lang/Object;:normal
+
+lazyclass:nginx/clojure/NginxHandler
+#mark from sub nginx/clojure/NginxSimpleHandler
+  execute(JJ)I:just_mark
+
+
+filter:clojure/asm
+filter:com/sun/crypto/provider/
+#filter:java/lang
+filter:java/util/LinkedHashMap
+filter:nginx/clojure/Stack
+filter:nginx/clojure/HackUtils
+filter:nginx/clojure/asm/
+filter:nginx/clojure/wave/
+filter:org/eclipse/jdt/
+filter:org/junit
+filter:org/objectweb/asm/
+filter:sun/security/ec/
+filter:sun/instrument/
+filter:com/sun/source/
+filter:com/sun/tools/javac/
+
+
+
+retransform:java.io.BufferedInputStream
+
+
+

@@ -1,0 +1,26 @@
+docker build -t registry.symphoni.io/soa/entitydefinition:v60 --no-cache=true .
+
+docker run --rm -p 11216:80 --name entitydefinition registry.symphoni.io/soa/entitydefinition:v60
+
+docker build -t dockerregistry.invent.devsymphoni.io:5000/soa/entitydefinition:v1 --no-cache=true .
+
+docker build -t registry.symphoni.io/soa/entitydefinition:v301 -t dockerregistry.invent.devsymphoni.io:5000/soa/entitydefinition:v301 --no-cache=true .
+
+docker push registry.symphoni.io/soa/entitydefinition:v301
+docker push dockerregistry.invent.devsymphoni.io:5000/soa/entitydefinition:v301
+
+docker build -t registry.symphoni.io/soa/entitydefinition:v301 -t dockerregistry.development.symphoni.io:5000/soa/entitydefinition:v301 --no-cache=true .
+
+docker push registry.symphoni.io/soa/entitydefinition:v301
+docker push dockerregistry.development.symphoni.io:5000/soa/entitydefinition:v301
+
+-- June 14,2017
+docker build -t registry.symphoni.io/soa/entitydefinition:v304 -t dockerregistry.development.symphoni.io:5000/soa/entitydefinition:v304 --no-cache=true .
+
+docker push dockerregistry.development.symphoni.io:5000/soa/entitydefinition:v304
+
+docker push registry.symphoni.io/soa/entitydefinition:v304
+
+
+
+

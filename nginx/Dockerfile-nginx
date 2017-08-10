@@ -1,0 +1,15 @@
+FROM nginx
+
+COPY run.sh /src/
+
+COPY nginx.conf /src/
+
+RUN chmod +x /src/run.sh
+
+RUN chmod +x /src/nginx.conf
+
+RUN nginx -v
+
+#RUN apk add --update openssl
+
+ENTRYPOINT /src/run.sh

@@ -1,0 +1,27 @@
+OM  nimmis/alpine-micro:3.4
+
+COPY run.sh /src/
+
+COPY bosuiteCA.pem /src/
+
+COPY nginx.conf /src/
+
+RUN mkdir /run/nginx
+
+RUN apk update && apk upgrade
+
+RUN  apk add --update nginx
+
+RUN apk add --update bash
+
+RUN chmod +x /src/run.sh
+
+RUN apk add --update --force
+
+RUN apk add --update openssl
+RUN openssl version -v
+#RUN nginx -v
+#RUN nginx -t -c /src/nginx.conf -s reload
+ENTRYPOINT /src/run.sh
+#CMD ["nginx", "-g", "daemon off;"]
+

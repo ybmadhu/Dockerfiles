@@ -1,0 +1,11 @@
+{
+   "options": {"failByDrop": false},
+   "outdir": "./target/reports/clients",
+
+   "servers": [
+               {"agent": "nc-embed", "url": "ws://localhost:8081/websocket-echo", "options": {"version": 18}}
+              ],
+   "cases": ["1.1.1"],
+   "exclude-cases": ["12.*", "13.*"],
+   "exclude-agent-cases": {}
+}

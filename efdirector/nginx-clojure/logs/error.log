@@ -1,0 +1,331 @@
+2016/11/08 13:18:53 [notice] 8068#6624: using the "select" event method
+2016/11/08 13:18:53 [notice] 8068#6624: nginx-clojure/0.4.4
+2016/11/08 13:18:53 [notice] 8068#6624: nginx/1.8.0
+2016/11/08 13:18:53 [info] 8068#6624: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:18:53 [notice] 8068#6624: start worker processes
+2016/11/08 13:18:53 [notice] 8068#6624: start worker process 6544
+2016/11/08 13:18:53 [notice] 6544#7892: nginx-clojure/0.4.4
+2016/11/08 13:18:53 [notice] 6544#7892: nginx/1.8.0
+2016/11/08 13:18:53 [info] 6544#7892: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:18:53 [notice] 6544#7892: create thread 7812
+2016/11/08 13:18:53 [notice] 6544#7892: create thread 8388
+2016/11/08 13:18:53 [notice] 6544#7892: create thread 4072
+2016/11/08 13:18:53 [notice] 6544#7812: ngx clojure: init pipe for jvm worker, fds: 920, 916
+java.lang.NoClassDefFoundError: nginx/clojure/MiniConstants
+Caused by: java.lang.ClassNotFoundException: nginx.clojure.MiniConstants
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+2016/11/08 13:18:53 [error] 6544#7812: can not initialize jvm memory util
+2016/11/08 13:18:53 [error] 6544#7812: jvm start times 1
+Exception in thread "main" 2016/11/08 13:18:53 [notice] 8068#6624: worker process 6544 exited with code 2
+2016/11/08 13:18:53 [notice] 8068#6624: start worker process 8472
+2016/11/08 13:18:53 [notice] 8472#8100: nginx-clojure/0.4.4
+2016/11/08 13:18:53 [notice] 8472#8100: nginx/1.8.0
+2016/11/08 13:18:53 [info] 8472#8100: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:18:53 [notice] 8472#8100: create thread 6076
+2016/11/08 13:18:53 [notice] 8472#8100: create thread 7860
+2016/11/08 13:18:53 [notice] 8472#8100: create thread 8248
+2016/11/08 13:18:53 [error] 8472#6076: jvm may be mad for wrong options! See hs_err_pid****.log for detail! restarted 2
+2016/11/08 13:18:53 [error] 8472#6076: we try quit master now!
+2016/11/08 13:18:53 [crit] 8472#6076: ngx_http_clojure_quit_master, file ("D:\Nginx\Clojure\nginx-clojure-0.4.4\nginx-win64.exe"), arg ("nginx-win64.exe   -s stop")
+2016/11/08 13:18:53 [notice] 8068#6624: worker process 8472 exited with code 2
+2016/11/08 13:18:53 [notice] 8068#6624: start worker process 3164
+2016/11/08 13:18:53 [notice] 8488#6736: nginx-clojure/0.4.4
+2016/11/08 13:18:53 [notice] 8488#6736: signal process started
+2016/11/08 13:18:53 [notice] 3164#6620: nginx-clojure/0.4.4
+2016/11/08 13:18:53 [notice] 3164#6620: nginx/1.8.0
+2016/11/08 13:18:53 [info] 3164#6620: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:18:53 [notice] 3164#6620: create thread 7824
+2016/11/08 13:18:53 [notice] 8068#6624: exiting
+2016/11/08 13:18:53 [notice] 3164#6620: create thread 8196
+2016/11/08 13:18:53 [notice] 3164#6620: create thread 9152
+2016/11/08 13:18:53 [notice] 3164#6620: gracefully shutting down
+2016/11/08 13:18:53 [error] 3164#7824: jvm may be mad for wrong options! See hs_err_pid****.log for detail! restarted 3
+2016/11/08 13:18:53 [error] 3164#7824: we try quit master now!
+2016/11/08 13:18:53 [crit] 3164#7824: ngx_http_clojure_quit_master, file ("D:\Nginx\Clojure\nginx-clojure-0.4.4\nginx-win64.exe"), arg ("nginx-win64.exe   -s stop")
+2016/11/08 13:18:53 [notice] 8068#6624: worker process 3164 exited with code 2
+2016/11/08 13:18:53 [notice] 8068#6624: exit
+2016/11/08 13:18:53 [notice] 7284#8484: nginx-clojure/0.4.4
+2016/11/08 13:18:53 [notice] 7284#8484: signal process started
+2016/11/08 13:18:53 [error] 7284#8484: CreateFile() "D:\Nginx\Clojure\nginx-clojure-0.4.4/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2016/11/08 13:21:15 [notice] 8356#8880: using the "select" event method
+2016/11/08 13:21:15 [notice] 8356#8880: nginx-clojure/0.4.4
+2016/11/08 13:21:15 [notice] 8356#8880: nginx/1.8.0
+2016/11/08 13:21:15 [info] 8356#8880: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:21:15 [notice] 8356#8880: start worker processes
+2016/11/08 13:21:15 [notice] 8356#8880: start worker process 8172
+2016/11/08 13:21:15 [notice] 8172#5376: nginx-clojure/0.4.4
+2016/11/08 13:21:15 [notice] 8172#5376: nginx/1.8.0
+2016/11/08 13:21:15 [info] 8172#5376: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:21:15 [notice] 8172#5376: create thread 8412
+2016/11/08 13:21:15 [notice] 8172#5376: create thread 3904
+2016/11/08 13:21:15 [notice] 8172#5376: create thread 7640
+2016/11/08 13:21:15 [notice] 8172#8412: ngx clojure: init pipe for jvm worker, fds: 920, 916
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:35)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:42)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:858)
+Caused by: java.lang.NoClassDefFoundError: clojure/lang/RT
+	at nginx.clojure.clj.Constants.<clinit>(Constants.java:27)
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:23)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:32)
+	... 2 more
+Caused by: java.lang.ClassNotFoundException: clojure.lang.RT
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 10 more
+2016/11/08 13:21:15 [error] 8172#8412: invalid clojure content_handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+Exception in thread "main" 2016/11/08 13:21:16 [notice] 8356#8880: worker process 8172 exited with code 2
+2016/11/08 13:21:16 [notice] 8356#8880: start worker process 9084
+2016/11/08 13:21:16 [notice] 9084#6148: nginx-clojure/0.4.4
+2016/11/08 13:21:16 [notice] 9084#6148: nginx/1.8.0
+2016/11/08 13:21:16 [info] 9084#6148: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:21:16 [notice] 9084#6148: create thread 7508
+2016/11/08 13:21:16 [notice] 9084#6148: create thread 5632
+2016/11/08 13:21:16 [notice] 9084#6148: create thread 8016
+2016/11/08 13:21:16 [error] 9084#7508: jvm may be mad for wrong options! See hs_err_pid****.log for detail! restarted 2
+2016/11/08 13:21:16 [error] 9084#7508: we try quit master now!
+2016/11/08 13:21:16 [crit] 9084#7508: ngx_http_clojure_quit_master, file ("D:\Nginx\Clojure\nginx-clojure-0.4.4\nginx-win64.exe"), arg ("nginx-win64.exe   -s stop")
+2016/11/08 13:21:16 [notice] 8356#8880: worker process 9084 exited with code 2
+2016/11/08 13:21:16 [notice] 8356#8880: start worker process 9088
+2016/11/08 13:21:16 [notice] 7176#7704: nginx-clojure/0.4.4
+2016/11/08 13:21:16 [notice] 7176#7704: signal process started
+2016/11/08 13:21:16 [notice] 9088#8044: nginx-clojure/0.4.4
+2016/11/08 13:21:16 [notice] 9088#8044: nginx/1.8.0
+2016/11/08 13:21:16 [info] 9088#8044: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:21:16 [notice] 8356#8880: exiting
+2016/11/08 13:21:16 [notice] 9088#8044: create thread 3152
+2016/11/08 13:21:16 [notice] 9088#8044: create thread 6820
+2016/11/08 13:21:16 [error] 9088#3152: jvm may be mad for wrong options! See hs_err_pid****.log for detail! restarted 3
+2016/11/08 13:21:16 [error] 9088#3152: we try quit master now!
+2016/11/08 13:21:16 [crit] 9088#3152: ngx_http_clojure_quit_master, file ("D:\Nginx\Clojure\nginx-clojure-0.4.4\nginx-win64.exe"), arg ("nginx-win64.exe   -s stop")
+2016/11/08 13:21:16 [notice] 8356#8880: worker process 9088 exited with code 2
+2016/11/08 13:21:16 [notice] 8356#8880: exit
+2016/11/08 13:21:16 [notice] 4196#3084: nginx-clojure/0.4.4
+2016/11/08 13:21:16 [notice] 4196#3084: signal process started
+2016/11/08 13:21:16 [error] 4196#3084: CreateFile() "D:\Nginx\Clojure\nginx-clojure-0.4.4/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2016/11/08 13:22:53 [notice] 8736#2224: using the "select" event method
+2016/11/08 13:22:53 [notice] 8736#2224: nginx-clojure/0.4.4
+2016/11/08 13:22:53 [notice] 8736#2224: nginx/1.8.0
+2016/11/08 13:22:53 [info] 8736#2224: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:22:53 [notice] 8736#2224: start worker processes
+2016/11/08 13:22:53 [notice] 8736#2224: start worker process 7936
+2016/11/08 13:22:53 [notice] 7936#2880: nginx-clojure/0.4.4
+2016/11/08 13:22:53 [notice] 7936#2880: nginx/1.8.0
+2016/11/08 13:22:53 [info] 7936#2880: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:22:53 [notice] 7936#2880: create thread 6412
+2016/11/08 13:22:53 [notice] 7936#2880: create thread 8392
+2016/11/08 13:22:53 [notice] 7936#2880: create thread 7340
+2016/11/08 13:22:53 [notice] 7936#6412: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 13:23:10 [error] 7936#6412: *1 no resolver defined to resolve google.com, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2016/11/08 13:23:32 [error] 7936#6412: *3 no resolver defined to resolve google.com, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
+2016/11/08 13:23:32 [error] 7936#6412: *3 no resolver defined to resolve google.com, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2016/11/08 13:24:10 [info] 7936#6412: *2 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 13:24:26 [info] 7936#6412: *4 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 13:27:20 [notice] 7180#8052: signal process started
+2016/11/08 13:27:20 [notice] 8736#2224: exiting
+2016/11/08 13:27:20 [notice] 7936#2880: gracefully shutting down
+2016/11/08 13:27:20 [notice] 7936#8392: exiting
+2016/11/08 13:27:20 [notice] 7936#6412: exiting
+2016/11/08 13:27:20 [notice] 7936#2880: exit
+2016/11/08 13:27:20 [notice] 8736#2224: worker process 7936 exited with code 1
+2016/11/08 13:27:20 [notice] 8736#2224: exit
+2016/11/08 13:27:32 [notice] 7724#8584: using the "select" event method
+2016/11/08 13:27:32 [notice] 7724#8584: nginx-clojure/0.4.4
+2016/11/08 13:27:32 [notice] 7724#8584: nginx/1.8.0
+2016/11/08 13:27:32 [info] 7724#8584: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:27:32 [notice] 7724#8584: start worker processes
+2016/11/08 13:27:32 [notice] 7724#8584: start worker process 3280
+2016/11/08 13:27:32 [notice] 3280#5012: nginx-clojure/0.4.4
+2016/11/08 13:27:32 [notice] 3280#5012: nginx/1.8.0
+2016/11/08 13:27:32 [info] 3280#5012: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:27:32 [notice] 3280#5012: create thread 9072
+2016/11/08 13:27:32 [notice] 3280#5012: create thread 7744
+2016/11/08 13:27:32 [notice] 3280#5012: create thread 5576
+2016/11/08 13:27:32 [notice] 3280#9072: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 13:29:07 [info] 3280#9072: *4 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 13:29:11 [info] 3280#9072: *7 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 13:29:15 [notice] 6452#8576: signal process started
+2016/11/08 13:29:15 [notice] 7724#8584: exiting
+2016/11/08 13:29:15 [notice] 3280#5012: gracefully shutting down
+2016/11/08 13:29:15 [notice] 3280#7744: exiting
+2016/11/08 13:29:16 [notice] 3280#9072: exiting
+2016/11/08 13:29:16 [notice] 3280#5012: exit
+2016/11/08 13:29:16 [notice] 7724#8584: worker process 3280 exited with code 1
+2016/11/08 13:29:16 [notice] 7724#8584: exit
+2016/11/08 13:31:03 [notice] 6704#7144: using the "select" event method
+2016/11/08 13:31:03 [notice] 6704#7144: nginx-clojure/0.4.4
+2016/11/08 13:31:03 [notice] 6704#7144: nginx/1.8.0
+2016/11/08 13:31:03 [info] 6704#7144: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:31:03 [notice] 6704#7144: start worker processes
+2016/11/08 13:31:03 [notice] 6704#7144: start worker process 7392
+2016/11/08 13:31:03 [notice] 7392#7124: nginx-clojure/0.4.4
+2016/11/08 13:31:03 [notice] 7392#7124: nginx/1.8.0
+2016/11/08 13:31:03 [info] 7392#7124: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 13:31:03 [notice] 7392#7124: create thread 8552
+2016/11/08 13:31:03 [notice] 7392#7124: create thread 7640
+2016/11/08 13:31:03 [notice] 7392#7124: create thread 5376
+2016/11/08 13:31:04 [notice] 7392#8552: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 13:32:10 [info] 7392#8552: *4 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 18:45:10 [notice] 11080#4732: signal process started
+2016/11/08 18:45:10 [notice] 6704#7144: exiting
+2016/11/08 18:45:10 [notice] 7392#7124: gracefully shutting down
+2016/11/08 18:45:10 [notice] 7392#7640: exiting
+2016/11/08 18:45:10 [notice] 7392#8552: exiting
+2016/11/08 18:45:10 [notice] 7392#7124: exit
+2016/11/08 18:45:11 [notice] 6704#7144: worker process 7392 exited with code 1
+2016/11/08 18:45:11 [notice] 6704#7144: exit
+2016/11/08 18:45:22 [notice] 10412#9888: using the "select" event method
+2016/11/08 18:45:22 [notice] 10412#9888: nginx-clojure/0.4.4
+2016/11/08 18:45:22 [notice] 10412#9888: nginx/1.8.0
+2016/11/08 18:45:22 [info] 10412#9888: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 18:45:22 [notice] 10412#9888: start worker processes
+2016/11/08 18:45:22 [notice] 10412#9888: start worker process 10808
+2016/11/08 18:45:23 [notice] 10808#6204: nginx-clojure/0.4.4
+2016/11/08 18:45:23 [notice] 10808#6204: nginx/1.8.0
+2016/11/08 18:45:23 [info] 10808#6204: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 18:45:23 [notice] 10808#6204: create thread 11172
+2016/11/08 18:45:23 [notice] 10808#6204: create thread 10200
+2016/11/08 18:45:23 [notice] 10808#6204: create thread 5348
+2016/11/08 18:45:23 [notice] 10808#11172: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 18:46:09 [info] 10808#11172: *4 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 18:49:50 [info] 10808#11172: *12 client timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 19:26:56 [notice] 6980#10448: signal process started
+2016/11/08 19:26:56 [notice] 10412#9888: exiting
+2016/11/08 19:26:56 [notice] 10808#6204: gracefully shutting down
+2016/11/08 19:26:56 [notice] 10808#10200: exiting
+2016/11/08 19:26:56 [notice] 10808#11172: exiting
+2016/11/08 19:26:56 [notice] 10808#6204: exit
+2016/11/08 19:26:56 [notice] 10412#9888: worker process 10808 exited with code 1
+2016/11/08 19:26:56 [notice] 10412#9888: exit
+2016/11/08 19:47:01 [notice] 8816#4196: using the "select" event method
+2016/11/08 19:47:01 [notice] 8816#4196: nginx-clojure/0.4.4
+2016/11/08 19:47:01 [notice] 8816#4196: nginx/1.8.0
+2016/11/08 19:47:01 [info] 8816#4196: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 19:47:01 [notice] 8816#4196: start worker processes
+2016/11/08 19:47:01 [notice] 8816#4196: start worker process 6520
+2016/11/08 19:47:01 [notice] 6520#7284: nginx-clojure/0.4.4
+2016/11/08 19:47:01 [notice] 6520#7284: nginx/1.8.0
+2016/11/08 19:47:01 [info] 6520#7284: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 19:47:01 [notice] 6520#7284: create thread 10316
+2016/11/08 19:47:01 [notice] 6520#7284: create thread 10800
+2016/11/08 19:47:02 [notice] 6520#7284: create thread 5724
+2016/11/08 19:47:02 [notice] 6520#10316: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016-11-08 19:47:29[error][6520][main]server unhandled exception!
+java.lang.NullPointerException
+	at org.syn.poc.nginxRouter.RoutingHandler.invoke(RoutingHandler.java:28)
+	at nginx.clojure.java.NginxJavaHandler.process(NginxJavaHandler.java:124)
+	at nginx.clojure.NginxSimpleHandler.handleRequest(NginxSimpleHandler.java:166)
+	at nginx.clojure.NginxSimpleHandler.execute(NginxSimpleHandler.java:97)
+	at nginx.clojure.NginxClojureRT.eval(NginxClojureRT.java:1125)
+2016/11/08 19:47:29 [info] 6520#10316: *1 client sent invalid method while reading client pipelined request line, client: 127.0.0.1, server: localhost, request: "{"entityinfo":{"entity":"","tenantid":"","timestamp":""},"collections":{"LukWebSeviceType":{"meta":{"parentreference":"***","pkname":"***","fkname":"***"},"rowset":["serviceTypeId","ServiceType"],"rowfilter":[]}}} "
+2016/11/08 19:48:03 [notice] 5640#10528: signal process started
+2016/11/08 19:48:03 [notice] 8816#4196: exiting
+2016/11/08 19:48:03 [notice] 6520#7284: gracefully shutting down
+2016/11/08 19:48:03 [notice] 6520#10800: exiting
+2016/11/08 19:48:08 [notice] 8816#4196: exit
+2016/11/08 19:50:16 [notice] 11064#632: using the "select" event method
+2016/11/08 19:50:16 [notice] 11064#632: nginx-clojure/0.4.4
+2016/11/08 19:50:16 [notice] 11064#632: nginx/1.8.0
+2016/11/08 19:50:16 [info] 11064#632: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 19:50:16 [notice] 11064#632: start worker processes
+2016/11/08 19:50:16 [notice] 11064#632: start worker process 11016
+2016/11/08 19:50:16 [notice] 11016#11260: nginx-clojure/0.4.4
+2016/11/08 19:50:16 [notice] 11016#11260: nginx/1.8.0
+2016/11/08 19:50:16 [info] 11016#11260: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 19:50:16 [notice] 11016#11260: create thread 10852
+2016/11/08 19:50:16 [notice] 11016#11260: create thread 8052
+2016/11/08 19:50:16 [notice] 11016#11260: create thread 6972
+2016/11/08 19:50:16 [notice] 11016#10852: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 19:51:12 [info] 11016#10852: *2 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 19:52:12 [notice] 7076#6556: signal process started
+2016/11/08 19:52:12 [notice] 11064#632: exiting
+2016/11/08 19:52:12 [notice] 11016#11260: gracefully shutting down
+2016/11/08 19:52:12 [notice] 11016#8052: exiting
+2016/11/08 19:52:12 [notice] 11016#10852: exiting
+2016/11/08 19:52:12 [notice] 11016#11260: exit
+2016/11/08 19:52:12 [notice] 11064#632: worker process 11016 exited with code 1
+2016/11/08 19:52:12 [notice] 11064#632: exit
+2016/11/08 19:52:23 [notice] 10328#10272: using the "select" event method
+2016/11/08 19:52:23 [notice] 10328#10272: nginx-clojure/0.4.4
+2016/11/08 19:52:23 [notice] 10328#10272: nginx/1.8.0
+2016/11/08 19:52:23 [info] 10328#10272: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 19:52:23 [notice] 10328#10272: start worker processes
+2016/11/08 19:52:23 [notice] 10328#10272: start worker process 9908
+2016/11/08 19:52:23 [notice] 9908#5540: nginx-clojure/0.4.4
+2016/11/08 19:52:23 [notice] 9908#5540: nginx/1.8.0
+2016/11/08 19:52:23 [info] 9908#5540: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 19:52:23 [notice] 9908#5540: create thread 11096
+2016/11/08 19:52:23 [notice] 9908#5540: create thread 7948
+2016/11/08 19:52:23 [notice] 9908#5540: create thread 10144
+2016/11/08 19:52:23 [notice] 9908#11096: ngx clojure: init pipe for jvm worker, fds: 916, 912
+2016/11/08 19:52:55 [info] 9908#11096: *2 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 20:02:27 [notice] 10692#10304: signal process started
+2016/11/08 20:02:28 [notice] 10328#10272: exiting
+2016/11/08 20:02:28 [notice] 9908#5540: gracefully shutting down
+2016/11/08 20:02:28 [notice] 9908#7948: exiting
+2016/11/08 20:02:28 [notice] 9908#11096: exiting
+2016/11/08 20:02:28 [notice] 9908#5540: exit
+2016/11/08 20:02:28 [notice] 10328#10272: worker process 9908 exited with code 1
+2016/11/08 20:02:28 [notice] 10328#10272: exit
+2016/11/08 20:03:38 [notice] 9900#6728: using the "select" event method
+2016/11/08 20:03:38 [notice] 9900#6728: nginx-clojure/0.4.4
+2016/11/08 20:03:38 [notice] 9900#6728: nginx/1.8.0
+2016/11/08 20:03:38 [info] 9900#6728: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 20:03:38 [notice] 9900#6728: start worker processes
+2016/11/08 20:03:38 [notice] 9900#6728: start worker process 6340
+2016/11/08 20:03:39 [notice] 6340#6712: nginx-clojure/0.4.4
+2016/11/08 20:03:39 [notice] 6340#6712: nginx/1.8.0
+2016/11/08 20:03:39 [info] 6340#6712: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 20:03:39 [notice] 6340#6712: create thread 10664
+2016/11/08 20:03:39 [notice] 6340#6712: create thread 7392
+2016/11/08 20:03:39 [notice] 6340#6712: create thread 10436
+2016/11/08 20:03:39 [notice] 6340#10664: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 20:04:01 [info] 6340#10664: *2 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 20:04:48 [notice] 5676#9008: signal process started
+2016/11/08 20:04:48 [notice] 9900#6728: exiting
+2016/11/08 20:04:48 [notice] 6340#6712: gracefully shutting down
+2016/11/08 20:04:48 [notice] 6340#7392: exiting
+2016/11/08 20:04:48 [notice] 6340#10664: exiting
+2016/11/08 20:04:48 [notice] 6340#6712: exit
+2016/11/08 20:04:48 [notice] 9900#6728: worker process 6340 exited with code 1
+2016/11/08 20:04:48 [notice] 9900#6728: exit
+2016/11/08 20:04:56 [notice] 8472#6992: using the "select" event method
+2016/11/08 20:04:56 [notice] 8472#6992: nginx-clojure/0.4.4
+2016/11/08 20:04:56 [notice] 8472#6992: nginx/1.8.0
+2016/11/08 20:04:56 [info] 8472#6992: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 20:04:56 [notice] 8472#6992: start worker processes
+2016/11/08 20:04:56 [notice] 8472#6992: start worker process 9032
+2016/11/08 20:04:56 [notice] 9032#10576: nginx-clojure/0.4.4
+2016/11/08 20:04:56 [notice] 9032#10576: nginx/1.8.0
+2016/11/08 20:04:56 [info] 9032#10576: OS: 260110 build:7601, "Service Pack 1", suite:100, type:1
+2016/11/08 20:04:56 [notice] 9032#10576: create thread 9016
+2016/11/08 20:04:56 [notice] 9032#10576: create thread 10388
+2016/11/08 20:04:56 [notice] 9032#10576: create thread 10908
+2016/11/08 20:04:56 [notice] 9032#9016: ngx clojure: init pipe for jvm worker, fds: 920, 916
+2016/11/08 20:05:23 [info] 9032#9016: *2 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8080
+2016/11/08 20:27:30 [notice] 3024#5472: signal process started
+2016/11/08 20:27:30 [notice] 8472#6992: exiting
+2016/11/08 20:27:30 [notice] 9032#10576: gracefully shutting down
+2016/11/08 20:27:30 [notice] 9032#10388: exiting
+2016/11/08 20:27:30 [notice] 9032#9016: exiting
+2016/11/08 20:27:30 [notice] 9032#10576: exit
+2016/11/08 20:27:30 [notice] 8472#6992: worker process 9032 exited with code 1
+2016/11/08 20:27:30 [notice] 8472#6992: exit
+2016/11/21 13:04:24 [emerg] 5782#0: BIO_new_file("/etc/pki/mantl/input.pem") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/etc/pki/mantl/input.pem','r') error:2006D080:BIO routines:BIO_new_file:no such file)

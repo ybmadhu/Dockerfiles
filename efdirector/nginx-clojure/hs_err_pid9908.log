@@ -1,0 +1,237 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000062731015, pid=9908, tid=5540
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_71-b15) (build 1.8.0_71-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.71-b15 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x31015]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000140
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000000000029ed30, RCX=0x000000000000000e, RDX=0x0000000057e3f500
+RSP=0x000000000029ecd0, RBP=0x0000000000000182, RSI=0x000000000029edc8, RDI=0x0000000057e3f500
+R8 =0x0000000000000004, R9 =0x0000000000000000, R10=0x0000000057e3f500, R11=0x0000000002e2a140
+R12=0x0000000062d13550, R13=0x0000000002a9e000, R14=0x0000000057e3f500, R15=0x0000000057e3f500
+RIP=0x0000000062731015, EFLAGS=0x0000000000010246
+
+Top of Stack: (sp=0x000000000029ecd0)
+0x000000000029ecd0:   0000000017a353e8 0000000000000005
+0x000000000029ece0:   00000000d610cb68 0000000000000000
+0x000000000029ecf0:   0000000002a9e000 00000000629749e6
+0x000000000029ed00:   000000000029edc8 0000000002a9ee60
+0x000000000029ed10:   000000000029edc8 0000000002a9e000
+0x000000000029ed20:   0000000000000000 0000000000000000
+0x000000000029ed30:   0000000057e3f500 0000000000000000
+0x000000000029ed40:   0000000002976c60 0000000062912862
+0x000000000029ed50:   0000000057e3f500 000000000029ee50
+0x000000000029ed60:   0000000002a9e000 00000000ffffffff
+0x000000000029ed70:   0000000057e3f500 000000006293473a
+0x000000000029ed80:   000000000029eef0 000000000000018c
+0x000000000029ed90:   0000000057e3f500 0000000002a9e000
+0x000000000029eda0:   0000000003731520 0000000000000000
+0x000000000029edb0:   000007fffffae000 ffffffffffffffff
+0x000000000029edc0:   000039ded1a90047 0000000057e3f500 
+
+Instructions: (pc=0x0000000062731015)
+0x0000000062730ff5:   41 08 00 00 00 00 48 85 d2 74 40 8b 0d b2 66 77
+0x0000000062731005:   00 48 89 74 24 30 ff 15 df 23 5a 00 48 89 43 08
+0x0000000062731015:   48 8b b0 40 01 00 00 8b 16 3b 56 04 75 08 48 8b
+0x0000000062731025:   ce e8 e5 52 21 00 48 63 0e 8d 41 01 89 06 48 8b 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x000000000029ed30 is an unknown value
+RCX=0x000000000000000e is an unknown value
+RDX={method} {0x0000000057e3f508} 'destoryMemIndex' '()V' in 'nginx/clojure/NginxClojureRT'
+RSP=0x000000000029ecd0 is an unknown value
+RBP=0x0000000000000182 is an unknown value
+RSI=0x000000000029edc8 is an unknown value
+RDI={method} {0x0000000057e3f508} 'destoryMemIndex' '()V' in 'nginx/clojure/NginxClojureRT'
+R8 =0x0000000000000004 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10={method} {0x0000000057e3f508} 'destoryMemIndex' '()V' in 'nginx/clojure/NginxClojureRT'
+R11=0x0000000002e2a140 is pointing into the stack for thread: 0x0000000002a9e000
+R12=0x0000000062d13550 is an unknown value
+R13=0x0000000002a9e000 is a thread
+R14={method} {0x0000000057e3f508} 'destoryMemIndex' '()V' in 'nginx/clojure/NginxClojureRT'
+R15={method} {0x0000000057e3f508} 'destoryMemIndex' '()V' in 'nginx/clojure/NginxClojureRT'
+
+
+Stack: [0x00000000001a0000,0x00000000002a0000],  sp=0x000000000029ecd0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x31015]
+V  [jvm.dll+0x2749e6]
+V  [jvm.dll+0x212862]
+V  [jvm.dll+0x32cf52]
+V  [jvm.dll+0x212bf3]
+V  [jvm.dll+0x1475a1]
+V  [jvm.dll+0x1574e0]
+C  [nginx-win64.exe+0xb8f3c]
+C  [nginx-win64.exe+0xbee3c]
+C  [nginx-win64.exe+0x292b1]
+C  [nginx-win64.exe+0x2a703]
+C  [nginx-win64.exe+0x2a874]
+C  [nginx-win64.exe+0x3ff0]
+C  [nginx-win64.exe+0x1ea713]
+C  [kernel32.dll+0x159cd]
+C  [ntdll.dll+0x2a2e1]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 4103K [0x00000000d5d80000, 0x00000000d8800000, 0x0000000100000000)
+  eden space 33280K, 12% used [0x00000000d5d80000,0x00000000d6181e80,0x00000000d7e00000)
+  from space 5120K, 0% used [0x00000000d8300000,0x00000000d8300000,0x00000000d8800000)
+  to   space 5120K, 0% used [0x00000000d7e00000,0x00000000d7e00000,0x00000000d8300000)
+ ParOldGen       total 87552K, used 0K [0x0000000081800000, 0x0000000086d80000, 0x00000000d5d80000)
+  object space 87552K, 0% used [0x0000000081800000,0x0000000081800000,0x0000000086d80000)
+ Metaspace       used 3576K, capacity 5004K, committed 5120K, reserved 1056768K
+  class space    used 399K, capacity 456K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x0000000012ae0000,0x0000000012ee0000] byte_map_base: 0x00000000126d4000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000062f0f600
+ Begin Bits: [0x00000000136f0000, 0x0000000015690000)
+ End Bits:   [0x0000000015690000, 0x0000000017630000)
+
+Polling page: 0x0000000000130000
+
+CodeCache: size=245760Kb used=1305Kb max_used=1310Kb free=244454Kb
+ bounds [0x0000000003720000, 0x0000000003990000, 0x0000000012720000]
+ total_blobs=395 nmethods=131 adapters=177
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 6.125 Thread 0x0000000059c40800 nmethod 127 0x0000000003864850 code [0x00000000038649a0, 0x0000000003864b30]
+Event: 6.125 Thread 0x0000000059c40800  128       3       java.util.WeakHashMap::hash (28 bytes)
+Event: 6.125 Thread 0x0000000059c40800 nmethod 128 0x0000000003864b90 code [0x0000000003864d00, 0x0000000003864f48]
+Event: 6.126 Thread 0x0000000058427000 nmethod 122 0x0000000003867d50 code [0x0000000003867e80, 0x0000000003867fd8]
+Event: 31.981 Thread 0x0000000059c40800  129       3       java.util.concurrent.ConcurrentHashMap::addCount (292 bytes)
+Event: 31.982 Thread 0x0000000059c40800 nmethod 129 0x0000000003866c50 code [0x0000000003866e60, 0x0000000003867968]
+Event: 31.982 Thread 0x0000000059c40800  130       3       java.nio.charset.CharsetEncoder::reset (11 bytes)
+Event: 31.982 Thread 0x0000000059c40800 nmethod 130 0x0000000003866810 code [0x0000000003866960, 0x0000000003866b90]
+Event: 31.982 Thread 0x0000000059c40800  131       3       java.nio.charset.CharsetEncoder::implReset (1 bytes)
+Event: 31.982 Thread 0x0000000059c40800 nmethod 131 0x0000000003866510 code [0x0000000003866660, 0x00000000038667b0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.022 Thread 0x0000000002a9e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d5d8dad0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\sr°sf7ÿ×–?
+Event: 0.022 Thread 0x0000000002a9e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d5d8ddb8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\src\share\vm\prims\j
+
+Events (10 events):
+Event: 6.124 loading class nginx/clojure/java/ArrayMap$EntrySet$1
+Event: 6.124 loading class nginx/clojure/java/ArrayMap$EntrySet$1 done
+Event: 6.125 loading class nginx/clojure/NginxSimpleHandler$SimpleEntry
+Event: 6.125 loading class nginx/clojure/NginxSimpleHandler$SimpleEntry done
+Event: 6.125 loading class nginx/clojure/java/ArrayMap$1
+Event: 6.125 loading class nginx/clojure/java/ArrayMap$1 done
+Event: 31.980 loading class nginx/clojure/java/JavaLazyHeaderMap
+Event: 31.980 loading class nginx/clojure/java/JavaLazyHeaderMap done
+Event: 31.981 loading class java/nio/ByteBufferAsLongBufferL
+Event: 31.981 loading class java/nio/ByteBufferAsLongBufferL done
+
+
+Dynamic libraries:
+0x000000013f210000 - 0x000000013f5f6000 	D:\Nginx\Clojure\nginx-clojure-0.4.4\nginx-win64.exe
+0x00000000776a0000 - 0x000000007784a000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077480000 - 0x000000007759f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd670000 - 0x000007fefd6da000 	C:\Windows\system32\KERNELBASE.dll
+0x00000000775a0000 - 0x000000007769a000 	C:\Windows\system32\USER32.dll
+0x000007fefe0b0000 - 0x000007fefe117000 	C:\Windows\system32\GDI32.dll
+0x000007fefde20000 - 0x000007fefde2e000 	C:\Windows\system32\LPK.dll
+0x000007fefd8a0000 - 0x000007fefd96a000 	C:\Windows\system32\USP10.dll
+0x000007feff830000 - 0x000007feff8cf000 	C:\Windows\system32\msvcrt.dll
+0x000007fefd7c0000 - 0x000007fefd89b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe420000 - 0x000007fefe43f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe720000 - 0x000007fefe84d000 	C:\Windows\system32\RPCRT4.dll
+0x000007fefe060000 - 0x000007fefe0ad000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe390000 - 0x000007fefe398000 	C:\Windows\system32\NSI.dll
+0x000007fefd410000 - 0x000007fefd57d000 	C:\Windows\system32\CRYPT32.dll
+0x000007fefd3e0000 - 0x000007fefd3ef000 	C:\Windows\system32\MSASN1.dll
+0x000007fefd790000 - 0x000007fefd7be000 	C:\Windows\system32\IMM32.DLL
+0x000007feff660000 - 0x000007feff769000 	C:\Windows\system32\MSCTF.dll
+0x000007fefcb60000 - 0x000007fefcbb5000 	C:\Windows\system32\mswsock.dll
+0x000007fefc580000 - 0x000007fefc587000 	C:\Windows\System32\wshtcpip.dll
+0x000007fefb130000 - 0x000007fefb145000 	C:\Windows\system32\NLAapi.dll
+0x000007fefa190000 - 0x000007fefa1a5000 	C:\Windows\system32\napinsp.dll
+0x000007fefa1b0000 - 0x000007fefa1c9000 	C:\Windows\system32\pnrpnsp.dll
+0x000007fefc9f0000 - 0x000007fefca4b000 	C:\Windows\system32\DNSAPI.dll
+0x000007fefa180000 - 0x000007fefa18b000 	C:\Windows\System32\winrnr.dll
+0x0000000074ef0000 - 0x0000000074f16000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x000007fefaea0000 - 0x000007fefaec7000 	C:\Windows\system32\Iphlpapi.DLL
+0x000007fefae60000 - 0x000007fefae6b000 	C:\Windows\system32\WINNSI.DLL
+0x000007fefccb0000 - 0x000007fefccc8000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefc880000 - 0x000007fefc8c7000 	C:\Windows\system32\rsaenh.dll
+0x000007fefd1d0000 - 0x000007fefd1df000 	C:\Windows\system32\CRYPTBASE.dll
+0x0000000062700000 - 0x0000000062f8f000 	C:\Program Files\Java\jre1.8.0_71\bin\server\jvm.dll
+0x000007fef8630000 - 0x000007fef8639000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefb150000 - 0x000007fefb18b000 	C:\Windows\system32\WINMM.dll
+0x000007fefc4b0000 - 0x000007fefc4bc000 	C:\Windows\system32\VERSION.dll
+0x0000000077870000 - 0x0000000077877000 	C:\Windows\system32\PSAPI.DLL
+0x0000000074220000 - 0x00000000742f2000 	C:\Windows\system32\MSVCR100.dll
+0x000000006e560000 - 0x000000006e56f000 	C:\Program Files\Java\jre1.8.0_71\bin\verify.dll
+0x000000006e530000 - 0x000000006e559000 	C:\Program Files\Java\jre1.8.0_71\bin\java.dll
+0x000000006e510000 - 0x000000006e526000 	C:\Program Files\Java\jre1.8.0_71\bin\zip.dll
+0x000007fefe8d0000 - 0x000007feff65a000 	C:\Windows\system32\SHELL32.dll
+0x000007fefe3a0000 - 0x000007fefe411000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe180000 - 0x000007fefe383000 	C:\Windows\system32\ole32.dll
+0x000007fefd3d0000 - 0x000007fefd3df000 	C:\Windows\system32\profapi.dll
+0x000000006e470000 - 0x000000006e47d000 	C:\Program Files\Java\jre1.8.0_71\bin\management.dll
+0x000000006e4f0000 - 0x000000006e50a000 	C:\Program Files\Java\jre1.8.0_71\bin\net.dll
+0x000007fefcd40000 - 0x000007fefcd47000 	C:\Windows\System32\wship6.dll
+0x000007fefa230000 - 0x000007fefa238000 	C:\Windows\system32\rasadhlp.dll
+0x000007fefada0000 - 0x000007fefadf3000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fef3170000 - 0x000007fef3295000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): jars/json-20160810.jar;jars/nginx-clojure-0.4.4.jar;jars/nginx-clojure-embed-0.4.4.jar;jars/nginx-jersey-0.1.3.jar;jars/nginx-tomcat8-0.2.3.jar;jars/nginxRouter-0.0.1-SNAPSHOT.jar
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_71
+PATH=C:\ProgramData\Oracle\Java\javapath;D:\javaDevelopementTools\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin;D:\javaDevelopementTools\apache-maven-3.0.5-bin\apache-maven-3.0.5\bin;D:\javaDevelopementTools\apache-maven-3.1.0\bin;D:\javaDevelopementTools\apache-activemq-5.8.0\bin;C:\Program Files\Java\jdk1.8.0_71\bin;D:\javaDevelopementTools\apache-maven-3.0.5-bin\apache-maven-3.0.5\bin;D:\javaDevelopementTools\apache-ant-1.7.0-bin\apache-ant-1.7.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft\Web Platform D:\javaDevelopementTools\apache-maven-3.1.0\bin;%CATALINA_HOME%\bin;%MAVEN_HOME\bin%;Installer\;C:\Program Files\TortoiseSVN\bin;D:\cURL\curl-7.40.0-win64\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Nmap
+USERNAME=prasad.n
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.23543)
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 8288336k(1518740k free), swap 16574812k(7192568k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.71-b15) for windows-amd64 JRE (1.8.0_71-b15), built on Dec 22 2015 18:15:55 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Nov 08 20:02:28 2016
+elapsed time: 604 seconds (0d 0h 10m 4s)
+

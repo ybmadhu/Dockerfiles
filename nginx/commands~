@@ -1,0 +1,17 @@
+
+
+docker build -t registry.symphoni.io/esb/nginx:v301 -t dockerregistry.invent.devsymphoni.io:5000/esb/nginx:v301  --no-cache=true . 
+
+docker push registry.symphoni.io/esb/nginx:v301
+
+docker push dockerregistry.invent.devsymphoni.io:5000/esb/nginx:v301
+
+
+docker build -t registry.symphoni.io/esb/nginx:v301 -t dockerregistry.development.symphoni.io:5000/esb/nginx:v301  --no-cache=true . 
+
+docker push registry.symphoni.io/esb/nginx:v301
+
+docker push dockerregistry.development.symphoni.io:5000/esb/nginx:v301
+
+
+
